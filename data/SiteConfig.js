@@ -1,5 +1,5 @@
 const config = {
-  siteTitle: "PagerDuty Dev Portal", // Site title.
+  siteTitle: "Gatsby Material Starter", // Site title.
   siteTitleShort: "GM Starter", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
   siteTitleAlt: "GatsbyJS Material Starter", // Alternative site title for SEO.
   siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
@@ -25,21 +25,21 @@ const config = {
   userLinks: [
     {
       label: "GitHub",
-      url: "https://github.com/PagerDuty",
+      url: "https://github.com/Vagr9K/gatsby-material-starter",
       iconClassName: "fa fa-github"
     },
     {
       label: "Twitter",
-      url: "https://twitter.com/PagerDuty",
+      url: "https://twitter.com/Vagr9K",
       iconClassName: "fa fa-twitter"
     },
     {
       label: "Email",
-      url: "mailto:open-source@pagerduty.com",
+      url: "mailto:vagr9k@gmail.com",
       iconClassName: "fa fa-envelope"
     }
   ],
-  copyright: "Copyright © 2019. PagerDuty" // Copyright string for the footer of the website and RSS feed.
+  copyright: "Copyright © 2019. Material User" // Copyright string for the footer of the website and RSS feed.
 };
 
 // Validate

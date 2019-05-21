@@ -5,7 +5,7 @@ const siteConfig = require("./data/SiteConfig");
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
-  let slug = `/blog`;
+  let slug;
   if (node.internal.type === "MarkdownRemark") {
     const fileNode = getNode(node.parent);
     const parsedFilePath = path.parse(fileNode.relativePath);
@@ -13,13 +13,13 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       Object.prototype.hasOwnProperty.call(node, "frontmatter") &&
       Object.prototype.hasOwnProperty.call(node.frontmatter, "title")
     ) {
-      slug += `/${_.kebabCase(node.frontmatter.title)}`;
+      slug = `/${_.kebabCase(node.frontmatter.title)}`;
     } else if (parsedFilePath.name !== "index" && parsedFilePath.dir !== "") {
-      slug += `/${parsedFilePath.dir}/${parsedFilePath.name}/`;
+      slug = `/${parsedFilePath.dir}/${parsedFilePath.name}/`;
     } else if (parsedFilePath.dir === "") {
-      slug += `/${parsedFilePath.name}/`;
+      slug = `/${parsedFilePath.name}/`;
     } else {
-      slug += `/${parsedFilePath.dir}/`;
+      slug = `/${parsedFilePath.dir}/`;
     }
 
     if (Object.prototype.hasOwnProperty.call(node, "frontmatter")) {
